@@ -133,3 +133,6 @@ console.log(selectedComment);
 
 // Array.prototype.findIndex()
 // 11. Find the index of the comment with an id of 123523
+
+const idxOfComment = comments.findIndex((comment) => comment.id === 123523);
+console.log(idxOfComment);
