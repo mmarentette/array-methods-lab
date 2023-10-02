@@ -110,7 +110,12 @@ console.log(anyOver19);
 // Array.prototype.every()
 // 9. Check if everyone is 19 or older?
 
-
+const allOver19 = devs.every((dev) => {
+    const currentYear = new Date().getFullYear();
+    const age = currentYear - dev.year;
+    return age >= 19;
+});
+console.log(allOver19);
 
 const comments = [
   { text: 'Love this!', id: 523423 },
