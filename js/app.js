@@ -45,8 +45,10 @@ console.log(ada);
 // Array.prototype.reduce()
 // 5. How many years did all the inventors live?
 
-
-
+const totalYearsInventorsLived = inventors.reduce((acc, inventor) => {
+    return acc + (inventor.passed - inventor.year);
+}, 0);
+console.log(totalYearsInventorsLived)
 
 const people = [
   'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry',
