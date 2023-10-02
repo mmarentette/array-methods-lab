@@ -17,7 +17,7 @@ const inventors = [
 // 1. Filter the array of inventors into a new array containing only the inventors born in the 1500's
 
 const inventorsBornIn1500s = inventors.filter((inventor) => {
-    return inventor.year >=1500 && inventor.year < 1600;
+    return inventor.year >= 1500 && inventor.year < 1600;
 });
 console.log(inventorsBornIn1500s);
 
@@ -48,7 +48,7 @@ console.log(ada);
 const totalYearsInventorsLived = inventors.reduce((acc, inventor) => {
     return acc + (inventor.passed - inventor.year);
 }, 0);
-console.log(totalYearsInventorsLived)
+console.log(totalYearsInventorsLived);
 
 const people = [
   'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry',
@@ -68,10 +68,10 @@ const people = [
 // 6. Map the people array such that the new array consists of strings with the names formatted as "First Last", e.g., "Becker, Carl" should be mapped to "Carl Becker".
 // Hint: As a start, consider using the String.prototype.split method to "split" the string using ', ' as the separator
 
-const peopleFullNames = people.map((person) => {
+const peopleFirstLastNames = people.map((person) => {
     return person.split(', ').reverse().join(' ');
-})
-console.log(peopleFullNames);
+});
+console.log(peopleFirstLastNames);
 
 const data = [
   'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van',
@@ -104,7 +104,7 @@ const anyOver19 = devs.some((dev) => {
     const currentYear = new Date().getFullYear();
     const age = currentYear - dev.year;
     return age >= 19;
-})
+});
 console.log(anyOver19);
 
 // Array.prototype.every()
