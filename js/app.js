@@ -82,6 +82,11 @@ const data = [
 // 7. Count the number of instances for each of the data items. The reduce should return an object where the keys are 'car', 'truck', etc. and the values are the count.
 // Hint: Since you want to return an object, be sure to pass an empty {} for the initial value of the "accumulator".
 
+const dataTally = data.reduce((tally, item) => {
+    tally[item] ? tally[item] += 1 : tally[item] = 1; 
+    return tally;
+}, {});
+console.log(dataTally);
 
 
 const devs = [
