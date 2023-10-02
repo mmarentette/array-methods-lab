@@ -39,7 +39,8 @@ console.log(sortedInventors);
 // Array.prototype.find()
 // 4. Find the inventor object with the first name of 'Ada'
 
-
+const ada = inventors.find((inventor) => inventor.first === 'Ada');
+console.log(ada);
 
 // Array.prototype.reduce()
 // 5. How many years did all the inventors live?
