@@ -100,6 +100,12 @@ const devs = [
 // 8. Check if at least one person is 19 or older?
 // Hint: To get today's year, use the getFullYear method of new Date(), i.e., new Date().getFullYear()
 
+const over19 = devs.some((dev) => {
+    const currentYear = new Date().getFullYear();
+    const age = currentYear - dev.year;
+    return age >= 19;
+})
+console.log(over19);
 
 // Array.prototype.every()
 // 9. Check if everyone is 19 or older?
