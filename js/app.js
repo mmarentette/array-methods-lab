@@ -68,8 +68,10 @@ const people = [
 // 6. Map the people array such that the new array consists of strings with the names formatted as "First Last", e.g., "Becker, Carl" should be mapped to "Carl Becker".
 // Hint: As a start, consider using the String.prototype.split method to "split" the string using ', ' as the separator
 
-
-
+const peopleFullNames = people.map((person) => {
+    return person.split(', ').reverse().join(' ');
+})
+console.log(peopleFullNames);
 
 const data = [
   'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van',
